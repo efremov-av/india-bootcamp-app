@@ -1,0 +1,35 @@
+{
+  "name": "github-app",
+  "vendor": "YOUR_ACCOUNT_NAME",
+  "version": "0.0.2",
+  "title": "VTEX IO App Example",
+  "description": "Reference app for VTEX IO",
+  "dependencies": {
+    "vtex.styleguide": "9.x"
+  },
+  "builders": {
+    "node": "6.x",
+    "admin": "0.x",
+    "messages": "1.x",
+    "react": "3.x"
+  },
+  "policies": [
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.github.com",
+        "path": "/users/*"
+      }
+    },
+    {
+      "name": "vbase-read-write"
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}
