@@ -1,0 +1,13 @@
+{
+  "memory": 256,
+  "ttl": 10,
+  "timeout": 5,
+  "minReplicas": 2,
+  "maxReplicas": 5,
+  "routes": {
+    "username": {
+      "path": "/_v/github-app/v0/username",
+      "public": true
+    }
+  }
+}
